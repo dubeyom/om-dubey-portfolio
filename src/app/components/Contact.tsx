@@ -2,6 +2,8 @@
 
 import React from 'react'
 import { motion } from 'framer-motion';
+import { FaLinkedin, FaGithub, FaInstagram } from 'react-icons/fa'; // Importing icons
+
 const Contact = () => {
     return (
         <section id='contact' className='py-32 text-white max-w-[1200px] mx-auto px-4'>
@@ -20,8 +22,8 @@ const Contact = () => {
                         className='text-7xl font-bold text-gray-300'
                     >
                         Get in <span className='text-gray-500'>touch</span>
-
                     </motion.h2>
+
                     <motion.div
                         initial={{ opacity: 0, x: -20 }}
                         whileInView={{ opacity: 1, x: 0 }}
@@ -33,20 +35,54 @@ const Contact = () => {
                             <a
                                 href='tel:+9335616893'
                                 className='text-2xl font-semibold hover:text-gray-400 transition duration-300 flex items-center gap-2'
-                            >+91 93356 16893
+                            >
+                                +91 93356 16893
                                 <span className='text-gray-500 '>↗</span>
                             </a>
                         </div>
 
                         <div className='space-y-2'>
                             <p className='text-lg text-gray-300'>Email</p>
-                            <a href="mailto:omdubey9977@gmail.com"
+                            <a
+                                href="mailto:omdubey9977@gmail.com"
                                 className='text-2xl font-semibold hover:text-gray-400 transition duration-300 flex items-center gap-2'
-                            >omdubey9977@gmail.com
+                            >
+                                omdubey9977@gmail.com
                                 <span className='text-gray-500 '>↗</span>
-
                             </a>
                         </div>
+
+                        {/* Social Section */}
+                        <div className='space-y-2'>
+                            <p className='text-lg text-gray-300'>Social</p>
+                            <div className='flex space-x-6 mt-2'>
+                                <a
+                                    href="https://www.linkedin.com/in/om-dubey-a2b090215/"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className='text-blue-600 hover:text-blue-400 transition duration-300 text-3xl'
+                                >
+                                    <FaLinkedin />
+                                </a>
+                                <a
+                                    href="https://github.com/dubeyOm"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className='text-gray-300 hover:text-gray-500 transition duration-300 text-3xl'
+                                >
+                                    <FaGithub />
+                                </a>
+                                <a
+                                    href="https://www.instagram.com/iomdubey/"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className='text-pink-500 hover:text-pink-400 transition duration-300 text-3xl'
+                                >
+                                    <FaInstagram />
+                                </a>
+                            </div>
+                        </div>
+
                         <div className='space-y-2'>
                             <p className='text-lg text-gray-300'>Address</p>
                             <address className='text-xl non-italic leading-relaxed'>
@@ -55,14 +91,10 @@ const Contact = () => {
                                 Uttar Pradesh <br />
                                 India <br />
                             </address>
-
                         </div>
-
-
-
                     </motion.div>
-
                 </div>
+
                 <motion.div
                     initial={{ opacity: 0, x: 20 }}
                     whileInView={{ opacity: 1, x: 0 }}
@@ -77,12 +109,10 @@ const Contact = () => {
                         allowFullScreen
                         loading='lazy'
                     ></iframe>
-
-
                 </motion.div>
             </motion.div>
         </section>
     )
 }
 
-export default Contact
+export default Contact;

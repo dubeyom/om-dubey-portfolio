@@ -27,14 +27,7 @@ const Hero = () => {
     const boxShadow = useMotionTemplate`0px 4px 24px ${color}`
 
 
-    const handleDownload = () => {
-        const link = document.createElement("a");
-        link.href = "../../../public/om-dubey-resume-2025.pdf";
-        link.download = "Om_Dubey_Resume.pdf";
-        document.body.appendChild(link);
-        link.click();
-        document.body.removeChild(link);
-    };
+
 
 
     return (
@@ -81,25 +74,30 @@ const Hero = () => {
                     <p className='font-medium'> 10+ Happy Clients</p>
 
                 </div>
-                <p className='my-6 max-w-xl text-center'>I am passionate Frontend Developer with little over 1.5 years of experience</p>
-                <motion.button
-                    style={{
-                        border,
-                        boxShadow
-                    }}
-                    whileHover={{
-                        scale: 1.015
-                    }}
-                    whileTap={{
-                        scale: 0.985
-                    }}
-
-                    className='flex w-fit items-center gap-2 rounded-full px-4 py-2 '
-                    onClick={handleDownload}
+                <p className='my-6 max-w-xl text-center'>I am a passionate Frontend Developer with little over 1.5 years of experience</p>
+                <a href="https://drive.google.com/file/d/1e-ByeurhMTpl2JZ5RcHJAEAq4eM_RCuC/view?usp=sharing"
+                    target='_blank'
                 >
-                    Download Resume
-                    <FiArrowRight className="" />
-                </motion.button>
+                    <motion.button
+                        style={{
+                            border,
+                            boxShadow
+                        }}
+                        whileHover={{
+                            scale: 1.015
+                        }}
+                        whileTap={{
+                            scale: 0.985
+                        }}
+
+                        className='flex w-fit items-center gap-2 rounded-full px-4 py-2 '
+
+                    >
+                        Download Resume
+                        <FiArrowRight className="" />
+                    </motion.button>
+                </a>
+
 
             </div>
 
